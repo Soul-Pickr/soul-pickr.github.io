@@ -1,0 +1,163 @@
+body {
+    font-size: 20px;
+  }
+  
+  ul {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+  }
+  
+  li {
+    float: right;
+  }
+  
+  li a {
+    display:block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.57);
+  }
+  
+  .active {
+          color: blueviolet;
+  }
+
+  .card {
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: 5rem;
+    text-align: center;
+    font-family: arial;
+    float: left;
+    background-color:rgba(0, 0, 0, 0.1);
+  }
+  .card:hover {
+    -ms-transform: scale(1); /* IE 9 */
+    -webkit-transform: scale(1); /* Safari 3-8 */
+    transform: scale(1.1); 
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }
+
+  /*cover img*/
+  .cover {
+	flex: 1;
+	display: flex;
+	justify-content:center;
+	height: 60vh;
+ 
+	 
+}
+.cover img {
+	height: 100%;
+	filter: drop-shadow(0px 10px 6px rgb(18, 20, 44));
+	animation: drop 1.5s ease;
+}
+.cover:hover {
+  -ms-transform: scale(1); /* IE 9 */
+  -webkit-transform: scale(1); /* Safari 3-8 */
+  transform: scale(1.1); 
+}
+
+
+.cta {
+  margin-left: 50px;
+	padding: 50px 0px 0px 0px;
+}
+.cta-select {
+	border: 2px solid rgb(241, 219, 90);
+	background: transparent;
+	color: #141f22;
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	font-size: 18px;
+}
+
+.cta :hover{
+    background-color:cyan;
+    box-shadow: 0 15px 8px 0 rgba(6, 90, 247, 0.2);
+
+}
+
+
+.presentation {
+
+	display: flex;
+	width: 100%;
+	margin: auto;
+  	min-height: 90vh;
+	align-items: center;
+    background-color:rgba(0, 0, 0, 0.5);
+    
+
+}
+.introduction {
+	flex: 1;
+}
+.intro-text h1 {
+	font-size: 44px;
+	font-weight: 500;
+	/* background: linear-gradient(to right, #3b3b42, #9d9daa); */
+}
+.intro-text p {
+	margin-top: 5px;
+	font-size: 22px;
+	color: #0f0e2c;
+}
+
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.card:hover .overlay {
+  width: 100%;
+  left: 0;
+  background-color:rgba(0, 0, 0, 0.1);
+
+}
+
+       .about{
+background-color: blueviolet;
+
+        }

@@ -1,0 +1,630 @@
+<html>
+<head>
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+body {
+    font-size: 20px;
+  }
+  
+.presentation {
+
+display: flex;
+width: 100%;
+margin: auto;
+  min-height: 90vh;
+align-items: center;
+  /* background-color:rgba(0, 0, 0, 0.5); */
+  background:url(bg.svg);
+  background-size: cover;
+
+background-repeat: none;
+  
+
+}
+.introduction {
+flex: 1;
+}
+.intro-text h1 {
+  margin-left: 100px;
+font-size: 65px;
+font-weight: 500;
+/* background: linear-gradient(to right, #3b3b42, #9d9daa); */
+}
+.intro-text p {
+margin-top: 5px;
+font-size: 22px;
+color: #0f0e2c;
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+  /*cover img*/
+  .cover {
+	flex: 1;
+	display: flex;
+	justify-content:center;
+	height: 60vh;
+ 
+	 
+}
+
+
+.cta-select {
+  
+	background-color:rgb(179, 175, 175);
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	font-size: 18px;
+}
+
+
+.cover img {
+	height: 100%;
+	filter: drop-shadow(0px 10px 6px rgb(18, 20, 44));
+	animation: drop 1.5s ease;
+}
+.cover:hover {
+  -ms-transform: scale(1); /* IE 9 */
+  -webkit-transform: scale(1); /* Safari 3-8 */
+  transform: scale(1.1); 
+}
+
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  margin-top: 100px;
+  float: left;
+  width: 25%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+.about{
+  color:indigo;
+    padding: 20px;
+   font-size: 40px;
+   text-align:justify;
+
+   margin-left: 100px;
+   margin-right: 100px;
+}
+.ab{
+ float:left;
+  margin: 0 15px 0 0;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+.footer {
+   position: relative;
+   left: 0;
+   bottom: 20;
+   width: 100%;
+   background-color: #1A5C6B;
+   color: white;
+   text-align: center;
+}
+
+hr {
+
+border-top: 5px dashed orange;
+}
+
+
+ul {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+    top: 0;
+  }
+  
+  li {
+    float: right;
+  }
+  
+  li a {
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.57);
+  }
+  
+  .active {
+          color: blueviolet;
+  }
+  .reg {
+  background-color: red;
+  font-size: 78px;
+  text-align: center;
+  background-image: linear-gradient(4deg, #bbdb2b, #af4261);
+  
+  background-size: 100%;
+  background-repeat: repeat;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+          }
+.hline{
+  width: 75%;
+  color: #ee8b90;
+ border: 2px dashed #ee8b90;
+}
+.abou{
+margin-top: 200px;
+background-color: #f2f2f2;
+
+
+}
+.mine{
+color: beige;
+  text-decoration: none;
+}
+.heade{
+font-size: 25px;
+  font-weight: bold;
+  margin-right: 10px;}
+
+  .cream{
+
+    font-size: 35px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+  }
+  .cream:hover{
+
+    background-color: red;
+  font-size: 35px;
+  text-align: center;
+  background-image: linear-gradient(45deg, #ff0000, #02eef7);
+  
+  background-size: 100%;
+  background-repeat: repeat;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  }
+
+
+
+  #myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+
+
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color:lightsalmon;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color:maroon;
+}
+
+/* Style the container/contact section */
+.container1 {
+  
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column1 {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+
+.cta {
+	display: inline-block;
+	padding: 10px 30px;
+	color: rgb(255, 255, 255);
+	background-color: transparent;
+	border: 2px solid crimson;
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+	margin-top: 30px;
+  margin-left: 100px;
+	transition: .3s ease;
+	transition-property: background-color, color;
+}
+
+
+</style>
+</head>
+<body>
+  <div class="heade">
+  <ul>
+    <li style="float:left;"><a href="#news"><img src="img/parlour.jpg" width="50" height="50"> </a></li>
+
+    <li style="float:left;"><a href="#news" class="cream">Creamy Crunchy</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#contact">Contact Us</a></li>
+    <li><a href="order.html">Order</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a class="active" href="#">Home</a></li>
+
+  </ul></div>
+
+  <section class="presentation">
+    <div class="introduction">
+      <div class="intro-text">
+        <h1>A surprise in every lick.</h1>
+                </div>
+      <div class="cta">
+        <button class="cta-select"><a href="order.html" class="mine">Order</a></button>
+
+      </div>
+    </div>
+    <div class="cover">
+      <img src="parlour.jpg">
+      </div>
+  </section>
+<!-- <div class="topnav" id="myTopnav">
+  <a href="index.html"   class="active">Games</a>
+  <a href="entertainment.html">Entertainment</a>
+  <a href="socialmedia.html">Social Media</a>
+
+     <a href="editingapps.html">Editors</a>
+     <a href="coding.html">Coders</a>
+	  <a href="moreapps.html"  >More Apps</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+
+ 
+</div> -->
+
+  <br/>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="1.jpeg" alt="Jane" style="width:100%">
+      <div class="container">
+       
+        <p><a href="order.html"><button class="button" >Order Now</button></a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="2.jpeg" alt="Mike" style="width:100%">
+      <div class="container">
+     
+        <p><a href="order.html"><button class="button">Order Now</button></a></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="8.jpeg" alt="John" style="width:100%">
+      <div class="container">
+        
+        <p><a href="order.html"><button class="button">Order Now</button></a></p>
+      </div>
+    </div>
+  </div>
+    <div class="column">
+    <div class="card">
+      <img src="3.jpeg" alt="John" style="width:100%">
+      <div class="container">
+      
+        <p><a href="order.html"><button class="button">Order Now</button></a></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="4.jpeg" alt="John" style="width:100%">
+      <div class="container">
+       
+        <p><a href="order.html"><button class="button">Order Now</button></a></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="5.jpeg" alt="John" style="width:100%">
+      <div class="container">
+       
+        <p><a href="order.html"><button class="button">Order Now</button></a></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="6.jpeg" alt="John" style="width:100%">
+      <div class="container">
+       
+        <p><a href="order.html"><button class="button">Order Now</button></a></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="7.jpeg" alt="John" style="width:100%">
+      <div class="container">
+       
+        <p><a href="order.html"><button class="button">Order Now</button></a></p>
+      </div>
+    </div>
+  </div>
+  
+  </div>
+
+
+<a name="about"></a>
+  <div class="abou">
+
+    <section class="reg">About Us</section>
+    <img src="teamwork.png" alt="" class="ab">
+    <p class="about"><b>Welcome to Creamy Crunchy Ice Cream Parlor. We have varieties of flavors of Ice Creams on our desk. We provide all size, types and flavors of ice creams at one go .
+    Ones you will have our ice cream ,you will need it everyday.<i>Yes, it's addictive.</i> We provide our Ice Creams on every events like wedding, birthday parties, anniversaries etc.<I> Our clients are everything for us therefore we never upset our clients and promises that we will fulfill every needs of our clients.</I> </p></b>
+    <!-- You can order our ice creams via <a href="https://mail.google.com/mail/u/0/?fs=1&to=raj682003@gmail.com&tf=cm">mail.</a> 
+  </div> -->
+  
+    <br/><br/>
+  
+  
+  
+  <section>
+  <br/>
+ 
+  
+  <br/>
+
+
+<a name="contact"></a>
+  
+<div class="container1">
+  <div style="text-align:center">
+    <h2 class="reg">Contact Us</h2>
+  </div>
+  <div class="row">
+    <div class="column1">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d392989.15368863306!2d80.17334143202834!3d27.1214455539233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m3!3m2!1d27.291346599999997!2d79.9656071!4m0!5e1!3m2!1sen!2sin!4v1624037926399!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div class="column1">
+      <form>
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="India">India</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+<hr width=50%>
+<hr width=50%>
+
+<div>
+ <div style="text-align:center;"><script type="text/javascript" src="http://services.webestools.com/cpt_visitors/69030-8-7.js"></script></div><a href="#" style="display:block;text-align:center;" ></a><br/>
+</div>
+
+  <hr width=50%>
+
+  <hr width=50%>
+  <br/><br/>
+<div class="footer"><BR/>
+<font size=4><p>You can't buy happiness, but you can buy ice cream and that is pretty much the same thing.</p>
+<p>Check this website frequently for amusing icecreams.</p></font>
+<p>Thank You!</p><img src="parlour.jpg" width=250 height=250>
+  <font size=3 face="cooper"><p>COPYRIGHT &copy; 2021 &nbsp; ALL RIGHTS RESERVED</p>
+  <p>Developed By <b><i><a href="https://www.linkedin.com/in/raj-rathaur-984604155" class="mine"> Raj Rathaur</a></i> & <i><a href="https://www.linkedin.com/in/gargi-chaturvedi-454974211" class="mine"> Gargi Chaturvedi</a></i></b></p></font>
+ <br/>
+</div>
+</section>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+<script>
+  //Get the button
+  var mybutton = document.getElementById("myBtn");
+  
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  </script>
+  
+
+
+</body>
+</html>

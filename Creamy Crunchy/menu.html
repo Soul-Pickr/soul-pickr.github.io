@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" oncontextmenu="return false">
+  <head>
+    <link rel="icon" href="parlour.jpg" type="image/icon type">
+    <meta charset="utf-8">
+    <title>MENU</title>
+    <style>
+        body{
+            user-select: none;
+        }
+      .card {
+          box-shadow: 0 15px 8px 0 rgba(6, 90, 247, 0.2);
+          max-width: 700px;
+          margin: auto;
+          text-align: center;
+            border-radius: 100px;
+            border-style: dotted dashed solid double;
+            border-color: rgb(245, 71, 94);
+          background-color: rgb(214, 241, 255);
+        }
+        .fa-envelope {
+          background: #cb2027;
+          color: white;
+        }
+
+        .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 100%;
+}
+        .fa:hover {
+    opacity: 0.7;
+}
+      
+        .parlour{
+          font-family: monospace;
+          text-shadow: 2px 11px 5px rgba(0,0,0,0.57);
+          font-size: 75px;
+          }
+          .pic{
+
+            width: 100%;
+          }
+       
+          tr:nth-child(even) {
+  background-color: #eba8e7;
+}
+tr:nth-child(odd) {
+  background-color: #bdf0a1;
+}
+td:hover{
+  background-color: #93dbf1;
+
+}
+th{
+  background-color: #ee8b90;
+
+}
+td, th {
+    padding: 8px;
+
+}
+table{
+  width: 100%;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ border-collapse: collapse;
+}
+.reg{
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 50px;
+              text-align: center;
+          }
+.hline{
+  width: 75%;
+  color: #ee8b90;
+ border: 2px dashed #ee8b90;
+}
+.speci{
+  display:flex;
+  box-shadow: 0 -9px 8px 0 rgba(62, 247, 6, 0.2);
+  text-align:center;
+
+}
+.ss{
+    width: 31%;
+    padding: 8px;
+  
+
+}
+a:link, a:visited {
+
+text-decoration: none;
+display: inline-block;
+font-size: 20px;
+
+}
+.about{
+    padding: 20px;
+   font-size: 20px;
+   text-align:center;
+}
+
+
+
+
+ul {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+  }
+  
+  li {
+    float: right;
+  }
+  
+  li a {
+    display:block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.57);
+  }
+  
+  .active {
+          color: blueviolet;
+  }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+  <body bgcolor="#dddddd">
+    <ul>
+        <li style="float:left;"><a href="#news"><img src="img/parlour.jpg" width="50" height="50"> </a></li>
+    
+        <li style="float:left;"><a href="#news">Creamy Crunchy</a></li>
+        <li><a href="index.html">About Us</a></li>
+    
+        <li><a href="index.html">Contact Us</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="#" class="active">Menu</a></li>
+        <li><a  href="index.html">Home</a></li>
+    
+      </ul>
+
+
+
+    <div class="card">
+      <h1 class="parlour">Creamy Crunchy Icecream Parlour</h1>
+      <img src="img/parlour.jpg" alt="Event_" class="pic">
+
+      <table>
+ <b><section class="reg">Regular</section></b>
+ <hr class="hline">
+          <tr>
+            <th>Flavour</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <td>Banana Cream Pie  </td>
+            <td>200ml</td>
+            <td>Rs 349</td>
+          </tr>
+          <tr>
+            <td>Blackberry  </td>
+            <td>200ml</td>
+            <td>Rs 249</td>
+          </tr>
+          <tr>
+            <td>Bubble Gum  </td>
+            <td>200ml</td>
+            <td>Rs 379</td>
+          </tr>
+          <tr>
+            <td>Butter Pecan  </td>
+            <td>200ml</td>
+            <td>Rs 329</td>
+          </tr>
+
+          <tr>
+            <td>Caramel Apple  </td>
+            <td>200ml</td>
+            <td>Rs 259</td>
+          </tr>
+          <tr>
+            <td>Chocolate Peanut Butter  </td>
+            <td>200ml</td>
+            <td>Rs 289</td>
+          </tr>
+          <tr>
+            <td>Cookies and Cream  </td>
+            <td>200ml</td>
+            <td>Rs 299</td>
+          </tr>
+          <tr>
+            <td>Cotton Candy  </td>
+            <td>200ml</td>
+            <td>Rs 349</td>
+          </tr>
+      </table>
+
+      <table>
+        <b><section class="reg">Premium</section></b>
+        <hr class="hline">
+          <tr>
+            <th>Flavour</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <td>Moose Tracks  </td>
+            <td>180ml</td>
+            <td>Rs 459</td>
+          </tr>
+          <tr>
+            <td>Neopolitan  </td>
+            <td>180ml</td>
+            <td>Rs 493</td>
+          </tr>
+          <tr>
+            <td>Red Velvet  </td>
+            <td>180ml</td>
+            <td>Rs 449</td>
+          </tr>
+          <tr>
+            <td>Rolled  </td>
+            <td>180ml</td>
+            <td>Rs 599</td>
+          </tr>
+
+          <tr>
+            <td>Root Beer Float  </td>
+            <td>180ml</td>
+            <td>Rs 489</td>
+          </tr>
+          <tr>
+            <td>Snickers  </td>
+            <td>180ml</td>
+            <td>Rs 469</td>
+          </tr>
+          <tr>
+            <td>Smores  </td>
+            <td>180ml</td>
+            <td>Rs 459</td>
+          </tr>
+          <tr>
+            <td>Superman  </td>
+            <td>180ml</td>
+            <td>Rs 489</td>
+          </tr>
+      </table><b>
+      <section class="reg">Special Items</section>
+      <hr class="hline">
+     <br>
+<div class="speci">
+    <img src="donuts.jpg" alt="Image" class="ss" > 
+    
+        <img src="pancake.jpg" alt="Image" class="ss">
+        <img src="cake.jpg" alt="Image" class="ss" >
+</div>
+<table><tr><td>Donuts</td><td>Delicious pancake</td><td>Iced Cake</td></tr>
+    <tr><td>Rs 418</td><td>Rs 284</td><td>Rs 899</td></tr></table>
+
+<br><br>
+<br><br><br>
+
+    </div>
+
+  </body>
+</html>

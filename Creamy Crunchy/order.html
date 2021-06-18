@@ -1,0 +1,254 @@
+<html>
+<head>
+<title>ORDER</title>
+<STYLE TYPE="text/css">
+
+.dt{
+        padding:8px;
+        display:block;
+        border:none;
+        border-bottom:1px solid rgb(240, 12, 12);
+        width:100%
+
+}
+.dte{
+    display: flex;
+    float:right;
+    text-decoration: none;
+}
+ .tbl{
+    border-radius: 15%;
+    border: 25px solid rgb(158, 95, 18);
+    padding: 30px;
+    background-color:cornsilk;
+    
+
+}
+.tarea{
+    resize: none;
+}
+
+
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    background: url(bg.svg);
+    background-size: cover;
+
+background-repeat: none;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.button1 {
+    background-color:GREEN;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button2 {
+    background-color: RED;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button3 {
+    background-color: PURPLE;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+</STYLE>
+<script type="text/javascript">
+function fu()
+{
+if(frm.name.value.length==0)
+{
+alert("Please enter customer name");
+}
+else if(frm.mobile.value.length==0)
+{
+alert("Please enter mobile number");
+}
+else if(frm.address.value.length==0)
+{
+alert("Please enter your address");
+}
+else if(frm.pincode.value.length==0)
+{
+alert("Please enter pincode");
+}
+else if(frm.email.value.length==0)
+{
+alert("Please enter E-mail address");
+}
+
+else
+{
+confirm("Your name is:"+frm.name.value+"and Address is:"+frm.address.value+".Your order for icecream has been placed now.Payment will be taken on the delivery of the icecream..Thank You!!");
+}
+
+
+
+
+}
+
+function ValidateEmail()
+{
+var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+if(frm.email.value.match(mailformat))
+{
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");
+document.frm.email.value.focus();
+return false;
+}
+}
+function fu1()
+{
+var a=frm.mobile.value;
+if(isNaN(a))
+{
+alert("please enter valid mobile number");
+}
+else
+{
+if(a.length!=10)
+{
+alert("please enter valid mobile number");
+}
+}
+}
+function fu2()
+{
+var a=frm.pincode.value;
+if(isNaN(a))
+{
+alert("please enter valid pin code");
+
+}
+else
+{
+if(a.length!=6)
+{
+alert("please enter valid pin code");
+
+
+}
+}
+}
+// function nav()
+// {
+// var a=new Date();
+// var b=a.getDate();
+// var c=a.getMonth();
+// var d=a.getYear();
+// var e=a.getHours();
+// var f=a.getMinutes();
+// frm.t1.value=b;
+// frm.t2.value=c+1;
+// frm.t3.value=d+1900;
+// frm.tt1.value=e;
+// frm.tt2.value=f;
+// }
+
+
+</script>
+
+<link rel="stylesheet" href = "style.css">
+
+</head>
+<!--  onLoad="nav()" -->
+<body>
+    <ul>
+        <li style="float:left;"><a href="#news"><img src="img/parlour.jpg" width="50" height="50"> </a></li>
+    
+        <li style="float:left;"><a href="#news">Creamy Crunchy</a></li>
+        <li><a href="index.html">About Us</a></li>
+    
+        <li><a href="index.html">Contact Us</a></li>
+        <li><a href="#" class="active">Order</a></li>
+        <li><a href="menu.html" >Menu</a></li>
+        <li><a  href="index.html">Home</a></li>
+    
+      </ul>
+
+
+    
+    
+    
+    <CENTER>
+        
+        <p id="dat"></p><script>
+            const d = new Date();
+            document.getElementById("dat").innerHTML =d;
+            </script>   
+<B>
+
+<form name="frm">
+    
+<table class="tbl" cellspacing="15px" cellpadding="5px">
+    <!-- <div class="dte">
+<b>Today's Date<input type="text" name="t1" size=2 class="dt"><input type="text" name="t2" size=2><input type="text" name="t3" size="6"></br>
+Time:<input type="text" name="tt1" size=2><input type="text" name="tt2" size=2></br></b>
+</div> -->
+
+
+<tr><td>
+  
+<b><h3>Customer name</h3></b></td><td><input type="text" name="name" size=15></td></tr>
+<tr><td><b><h3>Mobile number</h3></b></td><td><input type="text" name="mobile" maxlength=10 onBlur="fu1()"></td></tr><br>
+<tr><td><b><h3>Address:</h3></b></td><td><TEXTAREA name="address" rows=3 cols=3 class="tarea"></textarea></td></tr><br>
+<tr><td><b><h3>Pin code</h3></b></td><td><input type="text" name="pincode" maxlength=6 onBlur="fu2()"></td></tr><br>
+<tr><td><b><h3>E-mail</h3></b></td><td><input type="text" name="email" size=20 onBlur="ValidateEmail()"></td></tr>
+<tr><td><b><h3>Select Flavor</h3></b></td><td><SELECT NAME="codee">
+<OPTION VALUE="D1">Banana Cream Pie</OPTION>
+<OPTION VALUE="D2">Blackberry</OPTION>
+<OPTION VALUE="D3">Bubble Gum</OPTION>
+<OPTION VALUE="D4">Butter Pecan</OPTION>
+<OPTION VALUE="D5">Caramel Apple</OPTION>
+<OPTION VALUE="D6">Chocolate Peanut Butter</OPTION>
+<OPTION VALUE="D7">Cookies and Cream</OPTION><OPTION VALUE="D8">Cotton Candy</OPTION><OPTION VALUE="D10">Moose Tracks</OPTION><OPTION VALUE="D11">Nepolitan</OPTION><OPTION VALUE="D12">Red Velvet</OPTION><OPTION VALUE="D13">Rolled</OPTION><OPTION VALUE="D14">Superman</OPTION><OPTION VALUE="D15">Root Beer Float</OPTION><OPTION VALUE="D16">Snickers</OPTION><OPTION VALUE="D17">Smores</OPTION>
+</SELECT></td></tr>
+</table>
+</br>
+<H2>PLEASE TAKE CARE THAT EVERYTHING IS FILLED OUT CORRECTLY,THEN CLICK "PLACE ORDER." CLICKING THE "PLACE ORDER" BUTTON WILL SEND YOUR ORDER TO <B><I>CREAMY CRUNCHY</B></I><BR>
+	
+<CENTER>
+<INPUT TYPE="RESET" CLASS="BUTTON2">
+<INPUT TYPE="SUBMIT" CLASS="BUTTON3" value="Place Order" name="PL" onclick="fu()">
+<A HREF="index.html"><input type="BUTTON" CLASS="BUTTON1" value="BACK TO HOMEPAGE"></a></CENTER>
+
+</form>
+
+
+</body>
+</html>
