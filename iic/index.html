@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AIM 1.0 - An Idea Matters</title>
+  <link rel="icon" href="logo.png">
+
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Reem+Kufi:wght@700&display=swap"
+    rel="stylesheet">
+    
+  <style>
+  
+/* canvas {
+  display: block;
+  vertical-align: bottom;
+} */
+
+/* ---- particles.js container ---- */
+
+/* #particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+} */
+    html {
+  scroll-behavior: smooth;
+}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Josefin Sans', sans-serif;
+
+    }
+   
+    body {
+       background-image: url('/25336.jpg'); 
+
+      background-repeat: no-repeat;
+      background-size: 100% 100%; 
+      margin: 0%;
+      padding: 0%;
+      height: 100vh;
+    }
+    /*#particles-js{
+      height: 100%;
+      background:#fff;
+    }
+    canvas{
+      position:absolute;
+      left:0;
+      top:0;
+      z-index:-1;
+    }*/
+
+
+    .header {
+
+      width: 100%;
+      height: 100vh;
+
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+
+    .mainheader {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .mainheader .logo img {
+      width: 50%;
+      height: 50%;
+      padding-left: 60px;
+      padding-right: 20px;
+    }
+
+    .mainheader nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .mainheader nav a {
+      text-decoration: none;
+      color: black;
+      text-transform: uppercase;
+      padding-right: 20px;
+      font-weight: bold;
+    }
+
+    :hover .mainheader nav a {
+
+      text-shadow: 3px -4px 6px rgba(0, 0, 0, 0.6);
+
+    }
+
+    main {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    main .right-sec {
+      padding-right: 70px;
+    }
+
+    main .left-sec {
+      padding-left: 100px;
+    }
+
+    .left-sec h2 {
+      font-size: 20px;
+      text-transform: capitalize;
+      font-weight: lighter;
+      color: #242424;
+      margin-top: 100px;
+    }
+
+    .left-sec h1 {
+      font-size: 55px;
+      text-transform: capitalize;
+      font-weight: 700;
+      margin: 15px 0;
+    }
+
+    .left-sec p {
+      margin-bottom: 20px;
+    }
+
+    .left-sec button {
+      padding: 15px 45px;
+      text-align: center;
+      font-size: 14px;
+      color: #fff;
+      border: none;
+      background-image: linear-gradient(to right, #649bff, #0070fa, #649bff);
+      border-radius: 10px;
+    }
+
+    .typewriter h2 {
+      overflow: hidden;
+      border-right: .15em solid orange;
+      white-space: nowrap;
+      margin: 0 auto;
+      letter-spacing: .15em;
+      animation:
+        typing 5s steps(30, end),
+        blink-caret .75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0
+      }
+
+      to {
+        width: 100%
+      }
+    }
+    @keyframes blink-caret {
+
+      from,
+      to {
+        border-color: transparent
+      }
+
+      50% {
+        border-color: orange;
+      }
+    }
+
+
+    .card {
+      display: inline-block;
+      width: 20rem;
+      height: 20rem;
+      margin: 20px;
+      text-align: center;
+      font-family: arial;
+
+      box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, .15);
+
+      backdrop-filter: blur(5px);
+    }
+
+    .card button {
+      padding: 10px 45px;
+
+      text-align: center;
+      font-size: 14px;
+      color: #fff;
+      border: none;
+      background-image: linear-gradient(to right, #649bff, #0070fa, #649bff);
+      border-radius: 10px;
+    }
+
+    .card button:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+    }
+
+
+    .why {
+      
+      text-align: center;
+      font-size: 6rem;
+      font-family: 'Reem Kufi', sans-serif;
+      height: 50rem;
+      margin: 2%;
+      box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, .15);
+
+      backdrop-filter: blur(5px);
+    }
+
+    .container-form {
+      text-align: center;
+      font-size: 6rem;
+      font-family: 'Reem Kufi', sans-serif;
+      width: 75%;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, .15);
+      backdrop-filter: blur(5px);
+      padding: 20px;
+      box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+    }
+
+
+    input[type="text"],
+    select,
+    textarea,
+    input[type="number"],
+    input[type="email"],
+    input[type="password"],input[type="date"] {
+      width: 50%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    input[type="date"]{
+      resize: none;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    .label-form {
+      font-size: 20px;
+      padding-top: 5px;
+      display: inline-block;
+    }
+
+    input[type=submit] {
+      background-color: #04AA6D;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+    }
+
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+
+    .col-25 {
+      float: left;
+      width: 25%;
+      margin-top: 12px;
+    }
+
+    .col-75 {
+      float: left;
+      width: 50%;
+      margin-top: 6px;
+    }
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+
+    @media screen and (max-width: 600px) {
+
+      .col-25,
+      .col-75,
+      input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+
+
+    /* Slideshow container */
+    .slideshow-container {
+      position: relative;
+      background: transparent;
+    }
+
+    /* Slides */
+    .mySlides {
+      display: none;
+      padding: 80px;
+      text-align: center;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -30px;
+      padding: 16px;
+      color: #888;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      position: absolute;
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+    }
+
+    /* Add an italic font style to all quotes */
+    q {
+      font-style: italic;
+    }
+
+    /* Add a blue color to the author */
+    .author {
+      color: cornflowerblue;
+    }
+
+
+    /* width */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey;
+      border-radius: 8px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: rgb(39, 0, 0);
+      border-radius: 6px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #772a06;
+    }
+
+    /* Float four columns side by side */
+    .column1 {
+      float: left;
+      width: 25%;
+      padding: 0 20px;
+    }
+    .row1 {
+      margin: 0 -5px;
+    }
+    .row1:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    @media screen and (max-width: 600px) {
+      .column1 {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+      }
+    }
+    .card1 {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      padding: 16px;
+      text-align: center;
+      background-color: #f1f1f1;
+
+      box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, .15);
+
+      backdrop-filter: blur(5px);
+    }
+
+
+
+    /* The Modal (background) */
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      padding-top: 100px;
+      /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+
+      box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, .15);
+
+      backdrop-filter: blur(5px);
+      margin: auto;
+      padding: 100px;
+      border: 1px solid #888;
+      height: 70%;
+      width: 80%;
+    }
+
+    /* The Close Button */
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 4rem;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /*schedule*/
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap");
+
+.schedule-heading {
+  text-align: center;
+  /* margin-bottom: -68px; */
+  font-size: 50px;
+  font-weight: 600;
+  color: #000;
+}
+
+.schedule {
+  background-image: linear-gradient(to right bottom, #383cb9a2, #13198698, #1b1f8bb7, #3236b1b9, #1d2199bb, #0f146d9a, #020553c5),
+  url('./img/image\ 12.png');
+  /* background: #202020; */
+  /* height: 100vh;  */
+  padding: 50px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  backdrop-filter: blur(4px);
+  /* background-attachment: fixed; */
+}
+
+.right-schedule {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.img-schedule {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.img-schedule::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  z-index: -5;
+  height: 85%;
+  background-color: #000000;
+  border-radius: 20px;
+}
+
+.left-schedule {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+
+.left-schedule h1 {
+  text-align: right;
+}
+
+.right-schedule .right h1 {
+  text-align: left;
+}
+
+.container3 {
+  /* min-height: 100vh; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.timeline {
+  /* width: 40%; */
+  height: auto;
+  color: #000;
+  margin-top: 50px;
+margin-left:250px;
+margin-right: 250px;
+  /* max-width: 80%; */
+  /* margin: 0 auto; */
+  display: flex;
+  align-items: center;
+  /* flex-direction: row; */
+  /* justify-content: center; */
+}
+
+.timeline ul {
+  list-style: none;
+}
+
+/* .schedule-row{
+  display: flex;
+  align-items: center;
+  height: 90px;
+  justify-content: space-between;
+  padding: 20px;
+  color: white;
+} */
+.timeline-content .back-color,
+.timeline-content .back-trans {
+  padding: 10px;
+  width: 500px;
+}
+
+.timeline-content .back-color {
+  background-color: #8b8b92;
+}
+
+.timeline ul li:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+
+}
+
+.timeline-content h1 {
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 1.3;
+  /* margin-bottom: 10px; */
+}
+
+.timeline-content p {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.timeline-content .date {
+  font-size: 12px;
+  font-weight: 300;
+  /* margin-bottom: 10px; */
+  letter-spacing: 2px;
+}
+
+.image {
+  width: 90px;
+  height: 90px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50px;
+}
+
+
+@media(max-width: 1180px) {
+
+  .timeline-content .back-color,
+  .timeline-content .back-trans {
+    padding: 10px;
+    width: 300px;
+  }
+
+  .timeline-content h1 {
+    font-size: 20px;
+  }
+
+  .thanos {
+    position: absolute;
+    float: right;
+    bottom: -21px;
+    z-index: 2;
+    display: block;
+    right: 0px;
+    width: 200px;
+    height: 270px;
+  }
+}
+
+@media(max-width: 770px) {
+
+  .timeline-content .back-color,
+  .timeline-content .back-trans {
+    padding: 5px;
+    width: 190px;
+  }
+
+  .timeline-content h1 {
+    font-size: 16px;
+  }
+
+  .timeline-content {
+    padding: 0;
+  }
+
+  .thanos{
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .timeline-content {
+    height: 50px;
+  }
+
+  .timeline-content h1 {
+    font-size: 12px;
+  }
+
+  .timeline-content .back-color,
+  .timeline-content .back-trans {
+    padding: 5px;
+    width: 150px;
+  }
+}
+.registerd{
+  text-align: center;
+}
+.register {
+  border-color: #e7e7e7;
+  color: black;
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 30px;
+  cursor: pointer;
+  text-align: center;
+  
+}
+
+.register:hover {
+  background: #e78080;
+}
+  </style>
+</head>
+
+<body>
+
+
+
+
+<!-- 
+  <div id="particles-js"></div> -->
+
+
+
+<!-- <div id="particles-js" style="height: 100%; width: 100%;!important">
+  <script src="particles.js">
+
+  </script> <script src="app.js">
+
+</script> -->
+<br><br>
+  <header>
+    <div class="mainheader"><br><br><br>
+      <div class="logo"><img src="SRMCM_Logo-removebg-preview.png" alt="logo"></div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#guidelines">Guidelines</a>
+        <a href="#schedule">Schedule</a>
+     
+        <a href="#about">About Us</a>
+        <a href="https://api.whatsapp.com/send?phone=+919670164272&text=Hey! I have a doubt regarding AIM 1.0...">Contact Us</a>
+      
+      </nav>
+    </div>
+
+
+    <main>
+      <section class="left-sec">
+        
+        <h1> AIM 1.0</h1>
+        <div class="typewriter">
+          <h2> An Idea Matters...</h2>
+        </div><br><br><br>
+        <div class="registerd"><a href="#registerbtn"><button class="register">Register Now</button></a></div>
+
+      </section>
+
+      <section class="right-sec">
+        <figure>
+          <img src="logo.png">
+        </figure>
+      </section>
+    </main>
+  </header>
+  <br><br><br>
+
+  <div class="row1">
+    <div class="column1">
+      <div class="card1">
+        <img src="innovation.png" style=width:50%;>
+        <br><br>
+        <h2>Innovation</h2>
+       
+      </div>
+    </div>
+
+    <div class="column1">
+
+      <div class="card1">
+        <img src="research.png" style=width:50%;>
+<br><br>
+
+        <h2>Research</h2>
+       
+      </div>
+    </div>
+
+    <div class="column1">
+
+      <div class="card1">
+        <img src="entrepreneur.png" style=width:50%;>
+<br><br>
+
+        <h2>Entreprener</h2>
+    
+      </div>
+    </div>
+
+   <div class="column1">
+      <div class="card1">
+        <img src="idea.png" style=width:50%;>
+<br><br>
+        <h2>Creativity</h2>
+       
+      </div>
+    </div> 
+  </div>
+  <br><br><br>
+  <div class="why"><a name="about"></a>
+    <span style="position: relative; top: 50px;">AIM 1.0    </span><br>
+
+    <p style="font-size: 40px; padding: 50px; text-align: justify;">AIM 1.0 is an innovative entrepreneurial ideas
+      enhancement program envisioned by IIC. Its
+      mission is to motivate learners about brainstorming
+      entrepreneurial thinking and ideas for providing
+      solutions to the problems faced by one in daily lives
+      and promote the same ideology to seed the birth of
+      future entrepreneurs.
+      The purpose of AIM 1.0 is to come together for
+      organized idea generation exercises and to help
+      individuals and teams to uncover revolutionary
+      ideas and to think boldly about the future.
+      Its an event providing a common platform for all to
+      present their ideas to the fellow professionals and
+      entrepreneurs for assistance and guidance for
+      bringing their idea true in reality.</p>
+  </div>
+  <br><br><br>
+  <br><br><br>
+  <center>
+    <div class="container-form"><a name="guidelines"></a>
+      <span style="position: relative; top: 30px;">GUIDELINES    </span>
+      <p style="font-size: 20px; padding: 50px; text-align: justify;"><b> 1. </b>The participants are required to form a team of 2 to 3 members and should get them registered latest by 23rd November of 2021. <br><br>
+
+        <b>2.</b> The teams have to come up with an innovative idea that either solves any of the real world problems or possess a potential of bringing the revolution in any domain of services. <br><br>
+        
+        <b>3.</b>  The teams have to draft a presentation showcasing their idea and submit it latest by 11 a.m. of 25th November of 2021. <br><br>
+        
+          <b> 4.</b>  The presentations will be shortlisted by the officials. <br><br>
+        
+            <b> 5.</b>  The selected teams will be then qualified to present their ideas infront of the officials and industry professionals on the event at 26th November of 2021. <br><br>
+        
+              <b> 6.</b>  Every team who submits their idea will be awarded with a certificate as a token of participation while the shortlisted teams will be awarded with certificates as a token of appreciation. The winning teams will be awarded with gifts and certificates and will also be granted with some resources under some terms and conditions for pursuing and bringing their idea to reality.  <br><br>
+        
+        ALL THE VERY BEST!</p>
+    </div>
+  </center><br><br>
+   <!-- Schedule -->
+   <div id="Schedule" class="schedule1" ><a name="schedule"></a><center>
+    <h1 class="schedule-heading">Schedule</h1>
+    <div class="container">
+        <div class="timeline">
+            <div class="left-schedule">
+                <div class="timeline-content">
+                    <div class="back-trans left">
+                        <h1>22nd November, 2021</h1>
+                    </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="back-color left">
+                        <h1>Registration Ends</h1>
+                    </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="back-trans left">
+                        <h1>24th November, 2021</h1>
+                    </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="back-color left">
+                        <h1>Idea Submission Starts</h1>
+                    </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="back-trans left">
+                        <h1>25th November, 2021</h1>
+                    </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="back-color left">
+                        <h1>Results & Winners Announcement</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="img-schedule">
+                <img class="image" src="image 5.png">
+                <img class="image" src="image 6.png">
+                <img class="image" src="image 7.png">
+                <img class="image" src="image 8.png">
+                <img class="image" src="image 9.png">
+                <img class="image" src=" image 10.png">
+            </div>
+
+            <div class="right-schedule">
+                <div class="timeline-content">
+                    <div class="back-color right">
+                        <h1>Registration starts</h1>
+                    </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="back-trans right">
+                        <h1>23rd November, 2021</h1>
+                    </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="back-color right">
+                        <h1>Orientation Programme</h1>
+                    </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="back-trans right">
+                        <h1>24th November, 2021</h1>
+                    </div>
+                </div><a name="registerbtn"></a>
+                <div class="timeline-content">
+                    <div class="back-color right">
+                        <h1>Idea Submission Ends</h1>
+                    </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="back-trans right">
+                        <h1>26th November, 2021</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  </center></div>
+
+  <br><br><div class="registerd"><button class="register"><a href="https://forms.gle/FLjoYSQkVEiff4KNA"> Register Now</a></button></div><br><br><br><br><center><iframe src="https://docs.google.com/forms/d/e/1FAIpQLScMQHxas1k4XipN4FtYzRFcaLQNQPnjSOCbrr66bloCdDCaVw/viewform?embedded=true" width="640" height="1800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></center><br><br><br><br>
+  <footer>
+    <div class="content">
+      <br>
+    <div class="bottom"><center>
+      <p>Copyright © 2021 <a href="#">SRMGPC's Institution Innovation Council</a> All rights reserved</p></center><br>
+    </div>
+  </footer>
+</div>
+</body>
+
+</html>
